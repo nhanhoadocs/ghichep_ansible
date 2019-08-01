@@ -11,12 +11,12 @@
 
 - name: Install Zabbix-Agent Ubuntu 18
   become: yes
-  apt: deb={{ zabbix_package_ubuntu18 }} 
+  apt: deb={{ zabbix_package_ubuntu18 }} state=present
   when: when: ansible_distribution == "Ubuntu" and ansible_distribution_major_version == "18"
   
 - name: Install Zabbix-Agent Ubuntu 16
   become: yes
-  apt: deb={{ zabbix_package_ubuntu16 }} 
+  apt: deb={{ zabbix_package_ubuntu16 }} state=present
   when: when: ansible_distribution == "Ubuntu" and ansible_distribution_major_version == "16"
   
 - name: Config zabbix-agent 
