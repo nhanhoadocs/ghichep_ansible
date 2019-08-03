@@ -1,4 +1,10 @@
 ---
+- name: Update file resolve.conf
+  blockinfile:
+    path: /etc/resolv.conf
+    block: |
+      nameserver 8.8.8.8
+    
 - name: Add Zabbix repo CentOS 7
   become: yes
   yum: name={{ zabbix_package_centos7 }} state=present
