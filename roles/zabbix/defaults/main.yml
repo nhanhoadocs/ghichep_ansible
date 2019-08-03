@@ -6,10 +6,10 @@ zabbix_package_ubuntu16: https://repo.zabbix.com/zabbix/4.0/ubuntu/pool/main/z/z
 
 # Configure Zabbix:
 zabbix_agent_port: 10050
-zabbix_server_ip: x.x.x.x
-zabbix_server_hostname: Zabbix
+zabbix_server_ip: 192.168.70.110
+zabbix_server_hostname: Zabbix server
 
 
 # Configure file:
 zabbix_agent_pid_file: "/var/run/zabbix/zabbix_agentd.pid"
-zabbix_agent_log_file: "/var/log/zabbix-agent/zabbix_agentd.log"
+zabbix_agent_log_file: "/var/log/zabbix/zabbix_agentd.log"
