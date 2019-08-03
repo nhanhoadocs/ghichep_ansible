@@ -11,5 +11,5 @@ zabbix_server_hostname: Zabbix
 
 
 # Configure file:
-zabbix_agent_pid_file: /var/run/zabbix/zabbix_agentd.pid
-zabbix_agent_log_file: /var/log/zabbix-agent/zabbix_agentd.log
+zabbix_agent_pid_file: "/var/run/zabbix/zabbix_agentd.pid"
+zabbix_agent_log_file: "/var/log/zabbix-agent/zabbix_agentd.log"
