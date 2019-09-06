@@ -22,8 +22,12 @@ ansible-playbook -i host setup.yml --ask-vault-pass
 
 ## 2. Chrony:
 
+
 - Run ansible chrony without ansible-vault:
 
 ```sh
+
+cd /etc/ansible
+
 ansible-playbook -i hosts setup.yml
 ```

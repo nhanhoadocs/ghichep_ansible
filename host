@@ -1,0 +1,2 @@
+[all]
+10.10.10.82 ansible_ssh_user=root ansible_ssh_pass=xxxxxx ansible_ssh_port=22
