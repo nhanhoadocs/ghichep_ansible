@@ -1,4 +1,5 @@
 ---
-- hosts: zabbix
+- hosts: all
   roles:
-       - zabbix
+#       - zabbix
+       - chrony
