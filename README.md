@@ -19,3 +19,11 @@ ansible-vault edit hosts
 ```sh
 ansible-playbook -i host setup.yml --ask-vault-pass
 ```
+
+## 2. Chrony:
+
+- Run ansible chrony without ansible-vault:
+
+```sh
+ansible-playbook -i hosts setup.yml
+```
