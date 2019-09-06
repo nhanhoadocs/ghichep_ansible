@@ -29,5 +29,7 @@ ansible-playbook -i host setup.yml --ask-vault-pass
 
 cd /etc/ansible
 
+git clone https://github.com/trimq/ghichep_ansible
+
 ansible-playbook -i hosts setup.yml
 ```
