@@ -1,35 +1,4 @@
 ---
-- name: Check if NTP Exists
-  stat:
-    path: /usr/lib/systemd/system/ntpd.service
-  register: ntpd_service_status
-
-- name: Stop NTPD running
-  systemd:
-    name=ntpd
-    state=stopped
-  when: ntpd_service_status.stat.exists
-  register: service_stopped
-
-- name: Set timezone Asia/HoChiMinh
-  timezone:
-    name: Asia/Ho_Chi_Minh
-
-- name: Install Chrony CentOS
-  become: yes
-  yum: name=chrony state=present
-  when: ansible_os_family == "RedHat"
-
-- name: Install Chrony Debian
-  become: yes
-  apt: name=chrony state=present
-  when: ansible_os_family == "Debian"
-
-- name: Config Chrony
-  template:
-    src: chrony_config.j2
-    dest: /etc/chrony.conf
-    owner: root
-    group: root
-    mode: '0644'
-  notify: restart chrony
+- include_vars: "{{ ansible_os_family }}.yml"
+- include: ntp.yml
+- include: install_chrony.yml
