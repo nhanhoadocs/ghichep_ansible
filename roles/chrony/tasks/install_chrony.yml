@@ -16,7 +16,7 @@
 - name: Config Chrony
   template:
     src: chrony_config.j2
-    dest: "{{ config_file }}"
+    dest: "{{ chrony_config_file }}"
     owner: root
     group: root
     mode: '0644'

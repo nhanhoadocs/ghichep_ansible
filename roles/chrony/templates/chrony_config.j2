@@ -1,4 +1,5 @@
 server {{ chrony_server }} iburst
+keyfile {{ chrony_key_file }}
 driftfile /var/lib/chrony/drift
 makestep 1.0 3
 rtcsync
